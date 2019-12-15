@@ -1,0 +1,4 @@
+R5T.Norsica.Configuration.Sardinia.Construction - A construction console-app for the library R5T.Norsica.Configuration.Sardinia.
+
+Goals
+
