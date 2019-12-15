@@ -1,9 +1,9 @@
 ﻿using System;
 
 
-namespace R5T.Norsica.Configuration
+namespace R5T.Norsica.Configuration.Raw
 {
-    public class NuGetConfiguration
+    public class DotnetConfiguration
     {
         public string NuGetExecutableFilePath { get; set; }
     }

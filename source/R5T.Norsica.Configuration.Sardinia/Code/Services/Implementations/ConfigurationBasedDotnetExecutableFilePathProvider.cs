@@ -5,17 +5,17 @@ using Microsoft.Extensions.Options;
 
 namespace R5T.Norsica.Configuration
 {
-    public class ConfigurationBasedNuGetExecutableFilePathProvider : INugetExecutableFilePathProvider
+    public class ConfigurationBasedDotnetExecutableFilePathProvider : IDotnetExecutableFilePathProvider
     {
-        private IOptions<NuGetConfiguration> NuGetConfiguration { get; }
+        private IOptions<DotnetConfiguration> NuGetConfiguration { get; }
 
 
-        public ConfigurationBasedNuGetExecutableFilePathProvider(IOptions<NuGetConfiguration> nuGetConfiguration)
+        public ConfigurationBasedDotnetExecutableFilePathProvider(IOptions<DotnetConfiguration> nuGetConfiguration)
         {
             this.NuGetConfiguration = nuGetConfiguration;
         }
 
-        public string GetNugetExecutableFilePath()
+        public string GetDotnetExecutableFilePath()
         {
             var nuGetConfiguration = this.NuGetConfiguration.Value;
 

@@ -2,22 +2,22 @@
 
 using Microsoft.Extensions.Options;
 
-using RawNuGetConfiguration = R5T.Norsica.Configuration.Raw.NuGetConfiguration;
+using RawNuGetConfiguration = R5T.Norsica.Configuration.Raw.DotnetConfiguration;
 
 
 namespace R5T.Norsica.Configuration
 {
-    public class NuGetConfigurationConfigureOptions : IConfigureOptions<NuGetConfiguration>
+    public class DotnetConfigurationConfigureOptions : IConfigureOptions<DotnetConfiguration>
     {
         private IOptions<RawNuGetConfiguration> RawNuGetConfiguration { get; set; }
 
 
-        public NuGetConfigurationConfigureOptions(IOptions<RawNuGetConfiguration> rawNuGetConfiguration)
+        public DotnetConfigurationConfigureOptions(IOptions<RawNuGetConfiguration> rawNuGetConfiguration)
         {
             this.RawNuGetConfiguration = rawNuGetConfiguration;
         }
 
-        public void Configure(NuGetConfiguration options)
+        public void Configure(DotnetConfiguration options)
         {
             var rawNuGetConfiguration = this.RawNuGetConfiguration.Value;
 
