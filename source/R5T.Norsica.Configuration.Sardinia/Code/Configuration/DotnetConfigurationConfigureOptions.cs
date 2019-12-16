@@ -21,7 +21,7 @@ namespace R5T.Norsica.Configuration
         {
             var rawNuGetConfiguration = this.RawNuGetConfiguration.Value;
 
-            options.NuGetExecutableFilePath = rawNuGetConfiguration.NuGetExecutableFilePath;
+            options.DotnetExecutableFilePath = rawNuGetConfiguration.DotnetExecutableFilePath;
         }
     }
 }

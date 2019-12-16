@@ -19,7 +19,7 @@ namespace R5T.Norsica.Configuration
         {
             var nuGetConfiguration = this.NuGetConfiguration.Value;
 
-            var nugetExecutableFilePath = nuGetConfiguration.NuGetExecutableFilePath;
+            var nugetExecutableFilePath = nuGetConfiguration.DotnetExecutableFilePath;
             return nugetExecutableFilePath;
         }
     }
