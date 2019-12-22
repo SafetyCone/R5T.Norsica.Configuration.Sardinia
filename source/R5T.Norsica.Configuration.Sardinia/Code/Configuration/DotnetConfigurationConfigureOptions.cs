@@ -9,7 +9,7 @@ namespace R5T.Norsica.Configuration
 {
     public class DotnetConfigurationConfigureOptions : IConfigureOptions<DotnetConfiguration>
     {
-        private IOptions<RawNuGetConfiguration> RawNuGetConfiguration { get; set; }
+        private IOptions<RawNuGetConfiguration> RawNuGetConfiguration { get; }
 
 
         public DotnetConfigurationConfigureOptions(IOptions<RawNuGetConfiguration> rawNuGetConfiguration)
