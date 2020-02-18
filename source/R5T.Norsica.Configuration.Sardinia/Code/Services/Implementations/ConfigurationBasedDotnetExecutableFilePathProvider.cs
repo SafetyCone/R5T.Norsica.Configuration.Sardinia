@@ -7,20 +7,20 @@ namespace R5T.Norsica.Configuration
 {
     public class ConfigurationBasedDotnetExecutableFilePathProvider : IDotnetExecutableFilePathProvider
     {
-        private IOptions<DotnetConfiguration> NuGetConfiguration { get; }
+        private IOptions<DotnetConfiguration> DotnetConfiguration { get; }
 
 
-        public ConfigurationBasedDotnetExecutableFilePathProvider(IOptions<DotnetConfiguration> nuGetConfiguration)
+        public ConfigurationBasedDotnetExecutableFilePathProvider(IOptions<DotnetConfiguration> dotnetConfiguration)
         {
-            this.NuGetConfiguration = nuGetConfiguration;
+            this.DotnetConfiguration = dotnetConfiguration;
         }
 
         public string GetDotnetExecutableFilePath()
         {
-            var nuGetConfiguration = this.NuGetConfiguration.Value;
+            var dotnetConfiguration = this.DotnetConfiguration.Value;
 
-            var nugetExecutableFilePath = nuGetConfiguration.DotnetExecutableFilePath;
-            return nugetExecutableFilePath;
+            var dotnetExecutableFilePath = dotnetConfiguration.DotnetExecutableFilePath;
+            return dotnetExecutableFilePath;
         }
     }
 }
