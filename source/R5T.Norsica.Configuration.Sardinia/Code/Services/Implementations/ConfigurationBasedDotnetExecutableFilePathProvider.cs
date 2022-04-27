@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Options;using R5T.T0064;
 
 
 namespace R5T.Norsica.Configuration
-{
-    public class ConfigurationBasedDotnetExecutableFilePathProvider : IDotnetExecutableFilePathProvider
+{[ServiceImplementationMarker]
+    public class ConfigurationBasedDotnetExecutableFilePathProvider : IDotnetExecutableFilePathProvider,IServiceImplementation
     {
         private IOptions<DotnetConfiguration> DotnetConfiguration { get; }
 
